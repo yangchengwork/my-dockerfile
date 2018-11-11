@@ -17,8 +17,8 @@ RUN set -x \
     && apt autoremove -y \
     && rm -rf /var/lib/apt/lists/*
 
-EXPOSE 8080 443 7000 7500
+EXPOSE 8080 8443 7000 7500
 
 WORKDIR /var/frp
-ENTRYPOINT ./frps -c /var/frp/conf/frps.ini
+ENTRYPOINT ./frps -c ./conf/frps.ini
 
